@@ -14,6 +14,7 @@
       font-family: Arial, sans-serif;
       background: #f5f7fb;
       color: #111827;
+      overflow-x: hidden;
     }
     .page-shell {
       max-width: 1200px;
@@ -108,10 +109,6 @@
     }
     .toc a:hover {
       text-decoration: underline;
-    }
-    .toc-index {
-      font-weight: 700;
-      margin-right: 6px;
     }
     .toc-path {
       word-break: break-all;
@@ -218,6 +215,129 @@
       color: #e5e7eb;
       padding: 16px;
       border-radius: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 900px) {
+      body {
+        padding: 20px;
+      }
+      .toc ol {
+        columns: 1;
+      }
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 12px;
+      }
+      .hero {
+        margin-bottom: 16px;
+        padding: 18px 16px;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      .hero p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .toolbar {
+        top: 8px;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      .toolbar label {
+        white-space: normal;
+      }
+      .toolbar input {
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      .toolbar .result-count {
+        white-space: normal;
+      }
+      .toc {
+        margin-bottom: 18px;
+        padding: 16px 14px;
+        border-radius: 14px;
+      }
+      .toc h2 {
+        font-size: 18px;
+      }
+      .toc ol {
+        padding-left: 18px;
+      }
+      .toc li {
+        margin-bottom: 10px;
+      }
+      .file-block {
+        margin: 16px 0;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      .file-header {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+      }
+      .file-block h2 {
+        font-size: 16px;
+        line-height: 1.35;
+        margin-bottom: 8px;
+      }
+      .file-meta {
+        font-size: 12px;
+      }
+      .badge {
+        min-width: 28px;
+        padding: 5px 9px;
+        font-size: 11px;
+      }
+      pre {
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+      .empty-state {
+        margin: 18px 0;
+        padding: 18px 14px;
+        border-radius: 14px;
+        font-size: 14px;
+      }
+      .back-to-top {
+        right: 12px;
+        bottom: 12px;
+        padding: 11px 14px;
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 420px) {
+      body {
+        padding: 10px;
+      }
+      .hero,
+      .toolbar,
+      .toc,
+      .file-block,
+      .empty-state {
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .file-badges {
+        gap: 6px;
+      }
+      pre {
+        font-size: 10px;
+      }
     }
     @media print {
       body {
@@ -280,7 +400,6 @@
         
       <li>
         <a href="#file-backend-env-example">
-          <span class="toc-index">1.</span>
           <span class="toc-path">backend/.env.example</span>
         </a>
       </li>
@@ -288,7 +407,6 @@
 
       <li>
         <a href="#file-backend-package-json">
-          <span class="toc-index">2.</span>
           <span class="toc-path">backend/package.json</span>
         </a>
       </li>
@@ -296,7 +414,6 @@
 
       <li>
         <a href="#file-backend-src-app-js">
-          <span class="toc-index">3.</span>
           <span class="toc-path">backend/src/app.js</span>
         </a>
       </li>
@@ -304,7 +421,6 @@
 
       <li>
         <a href="#file-backend-src-core-config-cloudinary-js">
-          <span class="toc-index">4.</span>
           <span class="toc-path">backend/src/core/config/cloudinary.js</span>
         </a>
       </li>
@@ -312,7 +428,6 @@
 
       <li>
         <a href="#file-backend-src-core-config-db-js">
-          <span class="toc-index">5.</span>
           <span class="toc-path">backend/src/core/config/db.js</span>
         </a>
       </li>
@@ -320,7 +435,6 @@
 
       <li>
         <a href="#file-backend-src-core-middleware-auth-middleware-js">
-          <span class="toc-index">6.</span>
           <span class="toc-path">backend/src/core/middleware/auth.middleware.js</span>
         </a>
       </li>
@@ -328,7 +442,6 @@
 
       <li>
         <a href="#file-backend-src-core-middleware-error-middleware-js">
-          <span class="toc-index">7.</span>
           <span class="toc-path">backend/src/core/middleware/error.middleware.js</span>
         </a>
       </li>
@@ -336,7 +449,6 @@
 
       <li>
         <a href="#file-backend-src-modules-advertisement-advertisement-controller-js">
-          <span class="toc-index">8.</span>
           <span class="toc-path">backend/src/modules/advertisement/advertisement.controller.js</span>
         </a>
       </li>
@@ -344,7 +456,6 @@
 
       <li>
         <a href="#file-backend-src-modules-advertisement-advertisement-routes-js">
-          <span class="toc-index">9.</span>
           <span class="toc-path">backend/src/modules/advertisement/advertisement.routes.js</span>
         </a>
       </li>
@@ -352,7 +463,6 @@
 
       <li>
         <a href="#file-backend-src-modules-archive-archive-controller-js">
-          <span class="toc-index">10.</span>
           <span class="toc-path">backend/src/modules/archive/archive.controller.js</span>
         </a>
       </li>
@@ -360,7 +470,6 @@
 
       <li>
         <a href="#file-backend-src-modules-archive-archive-routes-js">
-          <span class="toc-index">11.</span>
           <span class="toc-path">backend/src/modules/archive/archive.routes.js</span>
         </a>
       </li>
@@ -368,7 +477,6 @@
 
       <li>
         <a href="#file-backend-src-modules-auth-auth-controller-js">
-          <span class="toc-index">12.</span>
           <span class="toc-path">backend/src/modules/auth/auth.controller.js</span>
         </a>
       </li>
@@ -376,7 +484,6 @@
 
       <li>
         <a href="#file-backend-src-modules-auth-auth-routes-js">
-          <span class="toc-index">13.</span>
           <span class="toc-path">backend/src/modules/auth/auth.routes.js</span>
         </a>
       </li>
@@ -384,7 +491,6 @@
 
       <li>
         <a href="#file-backend-src-modules-chatbot-chatbot-controller-js">
-          <span class="toc-index">14.</span>
           <span class="toc-path">backend/src/modules/chatbot/chatbot.controller.js</span>
         </a>
       </li>
@@ -392,7 +498,6 @@
 
       <li>
         <a href="#file-backend-src-modules-chatbot-chatbot-routes-js">
-          <span class="toc-index">15.</span>
           <span class="toc-path">backend/src/modules/chatbot/chatbot.routes.js</span>
         </a>
       </li>
@@ -400,7 +505,6 @@
 
       <li>
         <a href="#file-backend-src-modules-contact-contact-controller-js">
-          <span class="toc-index">16.</span>
           <span class="toc-path">backend/src/modules/contact/contact.controller.js</span>
         </a>
       </li>
@@ -408,7 +512,6 @@
 
       <li>
         <a href="#file-backend-src-modules-contact-contact-routes-js">
-          <span class="toc-index">17.</span>
           <span class="toc-path">backend/src/modules/contact/contact.routes.js</span>
         </a>
       </li>
@@ -416,7 +519,6 @@
 
       <li>
         <a href="#file-backend-src-modules-gallery-gallery-controller-js">
-          <span class="toc-index">18.</span>
           <span class="toc-path">backend/src/modules/gallery/gallery.controller.js</span>
         </a>
       </li>
@@ -424,7 +526,6 @@
 
       <li>
         <a href="#file-backend-src-modules-gallery-gallery-routes-js">
-          <span class="toc-index">19.</span>
           <span class="toc-path">backend/src/modules/gallery/gallery.routes.js</span>
         </a>
       </li>
@@ -432,7 +533,6 @@
 
       <li>
         <a href="#file-backend-src-modules-payment-payment-controller-js">
-          <span class="toc-index">20.</span>
           <span class="toc-path">backend/src/modules/payment/payment.controller.js</span>
         </a>
       </li>
@@ -440,7 +540,6 @@
 
       <li>
         <a href="#file-backend-src-modules-payment-payment-routes-js">
-          <span class="toc-index">21.</span>
           <span class="toc-path">backend/src/modules/payment/payment.routes.js</span>
         </a>
       </li>
@@ -448,7 +547,6 @@
 
       <li>
         <a href="#file-backend-src-modules-reservation-reservation-controller-js">
-          <span class="toc-index">22.</span>
           <span class="toc-path">backend/src/modules/reservation/reservation.controller.js</span>
         </a>
       </li>
@@ -456,7 +554,6 @@
 
       <li>
         <a href="#file-backend-src-modules-reservation-reservation-routes-js">
-          <span class="toc-index">23.</span>
           <span class="toc-path">backend/src/modules/reservation/reservation.routes.js</span>
         </a>
       </li>
@@ -464,7 +561,6 @@
 
       <li>
         <a href="#file-backend-src-modules-reservation-reservation-shared-js">
-          <span class="toc-index">24.</span>
           <span class="toc-path">backend/src/modules/reservation/reservation.shared.js</span>
         </a>
       </li>
@@ -472,7 +568,6 @@
 
       <li>
         <a href="#file-backend-src-modules-system-system-controller-js">
-          <span class="toc-index">25.</span>
           <span class="toc-path">backend/src/modules/system/system.controller.js</span>
         </a>
       </li>
@@ -480,7 +575,6 @@
 
       <li>
         <a href="#file-backend-src-modules-system-system-routes-js">
-          <span class="toc-index">26.</span>
           <span class="toc-path">backend/src/modules/system/system.routes.js</span>
         </a>
       </li>
@@ -488,7 +582,6 @@
 
       <li>
         <a href="#file-backend-src-modules-user-user-controller-js">
-          <span class="toc-index">27.</span>
           <span class="toc-path">backend/src/modules/user/user.controller.js</span>
         </a>
       </li>
@@ -496,7 +589,6 @@
 
       <li>
         <a href="#file-backend-src-modules-user-user-routes-js">
-          <span class="toc-index">28.</span>
           <span class="toc-path">backend/src/modules/user/user.routes.js</span>
         </a>
       </li>
@@ -504,7 +596,6 @@
 
       <li>
         <a href="#file-backend-src-scripts-backfillreservationcodes-js">
-          <span class="toc-index">29.</span>
           <span class="toc-path">backend/src/scripts/backfillReservationCodes.js</span>
         </a>
       </li>
@@ -512,7 +603,6 @@
 
       <li>
         <a href="#file-backend-src-scripts-makeadmin-js">
-          <span class="toc-index">30.</span>
           <span class="toc-path">backend/src/scripts/makeAdmin.js</span>
         </a>
       </li>
@@ -520,7 +610,6 @@
 
       <li>
         <a href="#file-backend-src-scripts-migratelocalmongotoatlas-js">
-          <span class="toc-index">31.</span>
           <span class="toc-path">backend/src/scripts/migrateLocalMongoToAtlas.js</span>
         </a>
       </li>
@@ -528,7 +617,6 @@
 
       <li>
         <a href="#file-backend-src-scripts-seed-js">
-          <span class="toc-index">32.</span>
           <span class="toc-path">backend/src/scripts/seed.js</span>
         </a>
       </li>
@@ -536,7 +624,6 @@
 
       <li>
         <a href="#file-backend-src-server-js">
-          <span class="toc-index">33.</span>
           <span class="toc-path">backend/src/server.js</span>
         </a>
       </li>
@@ -544,7 +631,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-advertisement-js">
-          <span class="toc-index">34.</span>
           <span class="toc-path">backend/src/shared/models/Advertisement.js</span>
         </a>
       </li>
@@ -552,7 +638,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-chatqa-js">
-          <span class="toc-index">35.</span>
           <span class="toc-path">backend/src/shared/models/ChatQA.js</span>
         </a>
       </li>
@@ -560,7 +645,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-contactmessage-js">
-          <span class="toc-index">36.</span>
           <span class="toc-path">backend/src/shared/models/ContactMessage.js</span>
         </a>
       </li>
@@ -568,7 +652,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-galleryitem-js">
-          <span class="toc-index">37.</span>
           <span class="toc-path">backend/src/shared/models/GalleryItem.js</span>
         </a>
       </li>
@@ -576,7 +659,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-livechatmessage-js">
-          <span class="toc-index">38.</span>
           <span class="toc-path">backend/src/shared/models/LiveChatMessage.js</span>
         </a>
       </li>
@@ -584,7 +666,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-livechatthread-js">
-          <span class="toc-index">39.</span>
           <span class="toc-path">backend/src/shared/models/LiveChatThread.js</span>
         </a>
       </li>
@@ -592,7 +673,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-newslettersubscriber-js">
-          <span class="toc-index">40.</span>
           <span class="toc-path">backend/src/shared/models/NewsletterSubscriber.js</span>
         </a>
       </li>
@@ -600,7 +680,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-payment-js">
-          <span class="toc-index">41.</span>
           <span class="toc-path">backend/src/shared/models/Payment.js</span>
         </a>
       </li>
@@ -608,7 +687,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-pendingsignup-js">
-          <span class="toc-index">42.</span>
           <span class="toc-path">backend/src/shared/models/PendingSignup.js</span>
         </a>
       </li>
@@ -616,7 +694,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-reservation-js">
-          <span class="toc-index">43.</span>
           <span class="toc-path">backend/src/shared/models/Reservation.js</span>
         </a>
       </li>
@@ -624,7 +701,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-systemsetting-js">
-          <span class="toc-index">44.</span>
           <span class="toc-path">backend/src/shared/models/SystemSetting.js</span>
         </a>
       </li>
@@ -632,7 +708,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-user-js">
-          <span class="toc-index">45.</span>
           <span class="toc-path">backend/src/shared/models/User.js</span>
         </a>
       </li>
@@ -640,7 +715,6 @@
 
       <li>
         <a href="#file-backend-src-shared-models-userarchivefolder-js">
-          <span class="toc-index">46.</span>
           <span class="toc-path">backend/src/shared/models/UserArchiveFolder.js</span>
         </a>
       </li>
@@ -648,7 +722,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-adminallowlist-js">
-          <span class="toc-index">47.</span>
           <span class="toc-path">backend/src/shared/utils/adminAllowlist.js</span>
         </a>
       </li>
@@ -656,7 +729,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-asynchandler-js">
-          <span class="toc-index">48.</span>
           <span class="toc-path">backend/src/shared/utils/asyncHandler.js</span>
         </a>
       </li>
@@ -664,7 +736,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-jwt-js">
-          <span class="toc-index">49.</span>
           <span class="toc-path">backend/src/shared/utils/jwt.js</span>
         </a>
       </li>
@@ -672,7 +743,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-mailer-js">
-          <span class="toc-index">50.</span>
           <span class="toc-path">backend/src/shared/utils/mailer.js</span>
         </a>
       </li>
@@ -680,7 +750,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-notificationemail-js">
-          <span class="toc-index">51.</span>
           <span class="toc-path">backend/src/shared/utils/notificationEmail.js</span>
         </a>
       </li>
@@ -688,7 +757,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-passwordpolicy-js">
-          <span class="toc-index">52.</span>
           <span class="toc-path">backend/src/shared/utils/passwordPolicy.js</span>
         </a>
       </li>
@@ -696,7 +764,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-phone-js">
-          <span class="toc-index">53.</span>
           <span class="toc-path">backend/src/shared/utils/phone.js</span>
         </a>
       </li>
@@ -704,7 +771,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-publicbaseurl-js">
-          <span class="toc-index">54.</span>
           <span class="toc-path">backend/src/shared/utils/publicBaseUrl.js</span>
         </a>
       </li>
@@ -712,7 +778,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-reservationcode-js">
-          <span class="toc-index">55.</span>
           <span class="toc-path">backend/src/shared/utils/reservationCode.js</span>
         </a>
       </li>
@@ -720,7 +785,6 @@
 
       <li>
         <a href="#file-backend-src-shared-utils-roles-js">
-          <span class="toc-index">56.</span>
           <span class="toc-path">backend/src/shared/utils/roles.js</span>
         </a>
       </li>
@@ -728,7 +792,6 @@
 
       <li>
         <a href="#file-frontend-env-example">
-          <span class="toc-index">57.</span>
           <span class="toc-path">frontend/.env.example</span>
         </a>
       </li>
@@ -736,7 +799,6 @@
 
       <li>
         <a href="#file-frontend-index-html">
-          <span class="toc-index">58.</span>
           <span class="toc-path">frontend/index.html</span>
         </a>
       </li>
@@ -744,7 +806,6 @@
 
       <li>
         <a href="#file-frontend-package-json">
-          <span class="toc-index">59.</span>
           <span class="toc-path">frontend/package.json</span>
         </a>
       </li>
@@ -752,7 +813,6 @@
 
       <li>
         <a href="#file-frontend-public-env-js">
-          <span class="toc-index">60.</span>
           <span class="toc-path">frontend/public/env.js</span>
         </a>
       </li>
@@ -760,7 +820,6 @@
 
       <li>
         <a href="#file-frontend-src-app-jsx">
-          <span class="toc-index">61.</span>
           <span class="toc-path">frontend/src/App.jsx</span>
         </a>
       </li>
@@ -768,7 +827,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-adminhelpcontent-js">
-          <span class="toc-index">62.</span>
           <span class="toc-path">frontend/src/features/admin/adminHelpContent.js</span>
         </a>
       </li>
@@ -776,7 +834,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-chatcomposer-jsx">
-          <span class="toc-index">63.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/ChatComposer.jsx</span>
         </a>
       </li>
@@ -784,7 +841,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-chatdetailspanel-jsx">
-          <span class="toc-index">64.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/ChatDetailsPanel.jsx</span>
         </a>
       </li>
@@ -792,7 +848,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-chatheader-jsx">
-          <span class="toc-index">65.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/ChatHeader.jsx</span>
         </a>
       </li>
@@ -800,7 +855,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-chatsidebar-jsx">
-          <span class="toc-index">66.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/ChatSidebar.jsx</span>
         </a>
       </li>
@@ -808,7 +862,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-confirmdeletemodal-jsx">
-          <span class="toc-index">67.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/ConfirmDeleteModal.jsx</span>
         </a>
       </li>
@@ -816,7 +869,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-messagebubble-jsx">
-          <span class="toc-index">68.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/MessageBubble.jsx</span>
         </a>
       </li>
@@ -824,7 +876,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-messagelist-jsx">
-          <span class="toc-index">69.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/MessageList.jsx</span>
         </a>
       </li>
@@ -832,7 +883,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-components-chat-utils-js">
-          <span class="toc-index">70.</span>
           <span class="toc-path">frontend/src/features/admin/components/chat/utils.js</span>
         </a>
       </li>
@@ -840,7 +890,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-pages-admindashboardpage-jsx">
-          <span class="toc-index">71.</span>
           <span class="toc-path">frontend/src/features/admin/pages/AdminDashboardPage.jsx</span>
         </a>
       </li>
@@ -848,7 +897,6 @@
 
       <li>
         <a href="#file-frontend-src-features-admin-pages-adminhelpcenterpage-jsx">
-          <span class="toc-index">72.</span>
           <span class="toc-path">frontend/src/features/admin/pages/AdminHelpCenterPage.jsx</span>
         </a>
       </li>
@@ -856,7 +904,6 @@
 
       <li>
         <a href="#file-frontend-src-features-payment-components-paymentcard-jsx">
-          <span class="toc-index">73.</span>
           <span class="toc-path">frontend/src/features/payment/components/PaymentCard.jsx</span>
         </a>
       </li>
@@ -864,7 +911,6 @@
 
       <li>
         <a href="#file-frontend-src-features-payment-components-statusbadge-jsx">
-          <span class="toc-index">74.</span>
           <span class="toc-path">frontend/src/features/payment/components/StatusBadge.jsx</span>
         </a>
       </li>
@@ -872,7 +918,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-contactfaqpage-jsx">
-          <span class="toc-index">75.</span>
           <span class="toc-path">frontend/src/features/public/pages/ContactFaqPage.jsx</span>
         </a>
       </li>
@@ -880,7 +925,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-datadeletionpage-jsx">
-          <span class="toc-index">76.</span>
           <span class="toc-path">frontend/src/features/public/pages/DataDeletionPage.jsx</span>
         </a>
       </li>
@@ -888,7 +932,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-gallerypage-jsx">
-          <span class="toc-index">77.</span>
           <span class="toc-path">frontend/src/features/public/pages/GalleryPage.jsx</span>
         </a>
       </li>
@@ -896,7 +939,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-indexpage-jsx">
-          <span class="toc-index">78.</span>
           <span class="toc-path">frontend/src/features/public/pages/IndexPage.jsx</span>
         </a>
       </li>
@@ -904,7 +946,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-loginpage-jsx">
-          <span class="toc-index">79.</span>
           <span class="toc-path">frontend/src/features/public/pages/LoginPage.jsx</span>
         </a>
       </li>
@@ -912,7 +953,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-maintenancepage-jsx">
-          <span class="toc-index">80.</span>
           <span class="toc-path">frontend/src/features/public/pages/MaintenancePage.jsx</span>
         </a>
       </li>
@@ -920,7 +960,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-notfoundpage-jsx">
-          <span class="toc-index">81.</span>
           <span class="toc-path">frontend/src/features/public/pages/NotFoundPage.jsx</span>
         </a>
       </li>
@@ -928,7 +967,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-privacypolicypage-jsx">
-          <span class="toc-index">82.</span>
           <span class="toc-path">frontend/src/features/public/pages/PrivacyPolicyPage.jsx</span>
         </a>
       </li>
@@ -936,7 +974,6 @@
 
       <li>
         <a href="#file-frontend-src-features-public-pages-termspage-jsx">
-          <span class="toc-index">83.</span>
           <span class="toc-path">frontend/src/features/public/pages/TermsPage.jsx</span>
         </a>
       </li>
@@ -944,7 +981,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-helpcontent-js">
-          <span class="toc-index">84.</span>
           <span class="toc-path">frontend/src/features/user/helpContent.js</span>
         </a>
       </li>
@@ -952,7 +988,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-pages-dashboardpage-jsx">
-          <span class="toc-index">85.</span>
           <span class="toc-path">frontend/src/features/user/pages/DashboardPage.jsx</span>
         </a>
       </li>
@@ -960,7 +995,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-pages-helpcenterpage-jsx">
-          <span class="toc-index">86.</span>
           <span class="toc-path">frontend/src/features/user/pages/HelpCenterPage.jsx</span>
         </a>
       </li>
@@ -968,7 +1002,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-pages-payment-jsx">
-          <span class="toc-index">87.</span>
           <span class="toc-path">frontend/src/features/user/pages/Payment.jsx</span>
         </a>
       </li>
@@ -976,7 +1009,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-pages-paymentpage-jsx">
-          <span class="toc-index">88.</span>
           <span class="toc-path">frontend/src/features/user/pages/PaymentPage.jsx</span>
         </a>
       </li>
@@ -984,7 +1016,6 @@
 
       <li>
         <a href="#file-frontend-src-features-user-pages-reservationpage-jsx">
-          <span class="toc-index">89.</span>
           <span class="toc-path">frontend/src/features/user/pages/ReservationPage.jsx</span>
         </a>
       </li>
@@ -992,7 +1023,6 @@
 
       <li>
         <a href="#file-frontend-src-main-jsx">
-          <span class="toc-index">90.</span>
           <span class="toc-path">frontend/src/main.jsx</span>
         </a>
       </li>
@@ -1000,7 +1030,6 @@
 
       <li>
         <a href="#file-frontend-src-pages-payment-jsx">
-          <span class="toc-index">91.</span>
           <span class="toc-path">frontend/src/pages/Payment.jsx</span>
         </a>
       </li>
@@ -1008,7 +1037,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-components-aiassistantreplycontent-jsx">
-          <span class="toc-index">92.</span>
           <span class="toc-path">frontend/src/shared/components/AiAssistantReplyContent.jsx</span>
         </a>
       </li>
@@ -1016,7 +1044,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-components-chatbotwidget-jsx">
-          <span class="toc-index">93.</span>
           <span class="toc-path">frontend/src/shared/components/ChatbotWidget.jsx</span>
         </a>
       </li>
@@ -1024,7 +1051,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-components-footernewslettersignup-jsx">
-          <span class="toc-index">94.</span>
           <span class="toc-path">frontend/src/shared/components/FooterNewsletterSignup.jsx</span>
         </a>
       </li>
@@ -1032,7 +1058,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-components-loadingstate-jsx">
-          <span class="toc-index">95.</span>
           <span class="toc-path">frontend/src/shared/components/LoadingState.jsx</span>
         </a>
       </li>
@@ -1040,7 +1065,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-components-safeavatar-jsx">
-          <span class="toc-index">96.</span>
           <span class="toc-path">frontend/src/shared/components/SafeAvatar.jsx</span>
         </a>
       </li>
@@ -1048,7 +1072,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-hooks-usebodyscrolllock-js">
-          <span class="toc-index">97.</span>
           <span class="toc-path">frontend/src/shared/hooks/useBodyScrollLock.js</span>
         </a>
       </li>
@@ -1056,7 +1079,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-services-api-js">
-          <span class="toc-index">98.</span>
           <span class="toc-path">frontend/src/shared/services/api.js</span>
         </a>
       </li>
@@ -1064,7 +1086,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-services-prototypeapi-js">
-          <span class="toc-index">99.</span>
           <span class="toc-path">frontend/src/shared/services/prototypeApi.js</span>
         </a>
       </li>
@@ -1072,7 +1093,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-services-runtime-js">
-          <span class="toc-index">100.</span>
           <span class="toc-path">frontend/src/shared/services/runtime.js</span>
         </a>
       </li>
@@ -1080,7 +1100,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-utils-phone-js">
-          <span class="toc-index">101.</span>
           <span class="toc-path">frontend/src/shared/utils/phone.js</span>
         </a>
       </li>
@@ -1088,7 +1107,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-utils-receiptpdf-js">
-          <span class="toc-index">102.</span>
           <span class="toc-path">frontend/src/shared/utils/receiptPdf.js</span>
         </a>
       </li>
@@ -1096,7 +1114,6 @@
 
       <li>
         <a href="#file-frontend-src-shared-utils-roles-js">
-          <span class="toc-index">103.</span>
           <span class="toc-path">frontend/src/shared/utils/roles.js</span>
         </a>
       </li>
@@ -1104,7 +1121,6 @@
 
       <li>
         <a href="#file-frontend-src-tailwind-css">
-          <span class="toc-index">104.</span>
           <span class="toc-path">frontend/src/tailwind.css</span>
         </a>
       </li>
@@ -1112,7 +1128,6 @@
 
       <li>
         <a href="#file-frontend-vite-config-js">
-          <span class="toc-index">105.</span>
           <span class="toc-path">frontend/vite.config.js</span>
         </a>
       </li>
@@ -1120,7 +1135,6 @@
 
       <li>
         <a href="#file-package-json">
-          <span class="toc-index">106.</span>
           <span class="toc-path">package.json</span>
         </a>
       </li>
@@ -1128,7 +1142,6 @@
 
       <li>
         <a href="#file-public-js-api-js">
-          <span class="toc-index">107.</span>
           <span class="toc-path">public/js/api.js</span>
         </a>
       </li>
@@ -1136,7 +1149,6 @@
 
       <li>
         <a href="#file-public-js-chat-widget-js">
-          <span class="toc-index">108.</span>
           <span class="toc-path">public/js/chat-widget.js</span>
         </a>
       </li>
@@ -1144,7 +1156,6 @@
 
       <li>
         <a href="#file-railway-json">
-          <span class="toc-index">109.</span>
           <span class="toc-path">railway.json</span>
         </a>
       </li>
@@ -1152,7 +1163,6 @@
 
       <li>
         <a href="#file-railway-md">
-          <span class="toc-index">110.</span>
           <span class="toc-path">RAILWAY.md</span>
         </a>
       </li>
@@ -1160,7 +1170,6 @@
 
       <li>
         <a href="#file-scripts-copyfrontenddist-mjs">
-          <span class="toc-index">111.</span>
           <span class="toc-path">scripts/copyFrontendDist.mjs</span>
         </a>
       </li>
