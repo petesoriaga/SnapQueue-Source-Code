@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnapQueue Source Code Export</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #e8eefc, #f8fafc);
+      color: #0f172a;
+    }
+    .card {
+      width: min(760px, 100%);
+      padding: 32px;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.1;
+    }
+    p {
+      margin: 0 0 14px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #334155;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    }
+    .button-primary {
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    .button-secondary {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+    .meta {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>SnapQueue Source Code Export</h1>
+    <p>This repository hosts the bundled SnapQueue source-code documents as a free static site on GitHub Pages.</p>
+    <p>Use the HTML version for the best reading experience with search, file navigation, and a back-to-top button. Use the RTF version if you want to open the document in Microsoft Word.</p>
+    <div class="actions">
+      <a class="button button-primary" href="./SnapQueue-Complete-Source-Code.html">Open HTML Source Code Document</a>
+      <a class="button button-secondary" href="./SnapQueue-Complete-Source-Code.rtf">Download RTF Document</a>
+    </div>
+    <p class="meta">GitHub Pages requires an <code>index.html</code> file at the published source. This page is the landing page for the exported SnapQueue source bundle.</p>
+  </main>
+</body>
+</html>
